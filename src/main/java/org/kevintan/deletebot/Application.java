@@ -1,17 +1,16 @@
 package org.kevintan.deletebot;
 
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.javacord.api.DiscordApi;
+import org.javacord.api.DiscordApiBuilder;
 
 /**
  * Created by Kevin Tan 2019-04-16
  */
 
-
-@SpringBootApplication
 public class Application {
 
     public static void main(String[] args) {
-        SpringApplication.run(Application.class, args);
+        DiscordApi api = new DiscordApiBuilder().setToken("").login().join();
+        System.out.println("Discord Bot Joined");
     }
 }
